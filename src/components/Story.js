@@ -1,0 +1,42 @@
+import Image from "next/image";
+import Reveal from "@/components/Reveal";
+import { photos, unsplash } from "@/components/Media";
+
+export default function Story() {
+  return (
+    <section id="story" className="welcome">
+      <div className="welcome-art">
+        <Image
+          src={unsplash(photos.oliveOil)}
+          alt="Olive oil in a glass bottle beside fresh olives"
+          fill
+          sizes="(max-width: 960px) 90vw, 45vw"
+          className="photo"
+        />
+      </div>
+      <Reveal className="welcome-copy">
+        <p className="kicker">Our story</p>
+        <h2 className="display">
+          Welcome
+          <br />
+          to
+          <br />
+          Mediterranean Mezze
+        </h2>
+        <p>
+          It began at a long table: bowls passed hand to hand, bread torn
+          rather than cut, and a salad that had to be eaten the moment it was
+          dressed. Fattoush lives on contrast — sharp lemon, wine-dark sumac,
+          and herbs that stay vivid in the bowl.
+        </p>
+        <p>
+          We bottled that contrast. Small batches, six honest ingredients, and
+          a recipe made to be shaken, poured, and shared.
+        </p>
+        <a className="text-link" href="#table">
+          On the table
+        </a>
+      </Reveal>
+    </section>
+  );
+}
