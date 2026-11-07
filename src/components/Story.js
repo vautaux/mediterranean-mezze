@@ -23,16 +23,6 @@ export default function Story() {
           <br />
           Mediterranean Mezze
         </h2>
-        <p>
-          It began at a long table: bowls passed hand to hand, bread torn
-          rather than cut, and a salad that had to be eaten the moment it was
-          dressed. Fattoush lives on contrast — sharp lemon, wine-dark sumac,
-          and herbs that stay vivid in the bowl.
-        </p>
-        <p>
-          We bottled that contrast. Small batches, six honest ingredients, and
-          a recipe made to be shaken, poured, and shared.
-        </p>
         <a className="text-link" href="#table">
           On the table
         </a>

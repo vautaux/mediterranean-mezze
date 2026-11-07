@@ -354,6 +354,12 @@ button {
     linear-gradient(165deg, var(--firuzeh), var(--firuzeh-deep) 60%, #0f2e2c);
 }
 
+.tone-herb {
+  background:
+    radial-gradient(circle at 30% 20%, rgb(236 228 212 / 0.25), transparent 45%),
+    linear-gradient(165deg, #6fa04a, #3f6b2c 60%, #1c3414);
+}
+
 .media-meta {
   position: absolute;
   left: 1.2rem;
@@ -461,7 +467,8 @@ button {
 }
 
 .use h3 {
-  margin-top: 0.5rem;
+  margin-top: 1.4rem;
+  text-align: center;
   font-family: var(--font-display);
   font-size: 1.35rem;
   letter-spacing: 0.06em;
@@ -635,10 +642,8 @@ button {
   }
 }
 
-.discover-copy p {
-  margin-top: 1.4rem;
-  font-size: 1.08rem;
-  line-height: 1.8;
+.discover-copy .pill {
+  margin-top: 1.6rem;
 }
 
 .discover .display {
@@ -664,8 +669,8 @@ button {
 
 .contact {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  gap: clamp(2rem, 6vw, 6rem);
+  grid-template-columns: minmax(0, 0.7fr) minmax(0, 1.3fr);
+  gap: clamp(2rem, 4vw, 4rem);
   align-items: center;
   min-height: 80vh;
   padding: clamp(5rem, 10vw, 8rem) var(--gutter);
@@ -674,27 +679,29 @@ button {
 
 .contact-copy {
   max-width: 34rem;
+  text-align: center;
 }
 
 .contact-art {
   position: relative;
-  min-height: 46vh;
+  width: 100%;
+  max-width: 34rem;
+  justify-self: center;
+  aspect-ratio: 5 / 4;
   overflow: hidden;
   background: var(--bone);
   border-radius: 50% 50% 6px 6px / 30% 30% 6px 6px;
   box-shadow: 0 30px 60px -30px rgb(20 26 12 / 0.6);
 }
 
-/* Whole-dish photos: show the full frame instead of cropping to fill. */
+/* Photo fills the whole arch. */
 .contact-art .photo {
-  object-fit: contain;
-  padding: 1.75rem;
+  object-fit: cover;
+  object-position: 50% 58%;
 }
 
-.contact-copy p {
-  margin-top: 1.6rem;
-  font-size: 1.1rem;
-  line-height: 1.8;
+.contact-copy .pill {
+  margin-top: 2rem;
 }
 
 /* ---------- Contact dialog ---------- */
@@ -802,13 +809,17 @@ button {
 .footer-field {
   position: relative;
   overflow: hidden;
-  padding: 4rem var(--gutter) 2.4rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 2.4rem var(--gutter);
 }
 
 .footer-inner {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
-  gap: 3rem;
+  grid-template-columns: 1fr;
 }
 
 .footer-brand {
@@ -865,7 +876,7 @@ button {
   display: flex;
   justify-content: space-between;
   gap: 1rem;
-  margin-top: 2rem;
+  margin-top: 0;
   font-size: 0.72rem;
   letter-spacing: 0.24em;
   text-transform: uppercase;
@@ -919,9 +930,6 @@ html.js-motion .reveal.is-in {
     min-height: 50vh;
   }
 
-  .contact-art {
-    min-height: 34vh;
-  }
 
   .discover-art {
     width: 100%;
@@ -968,10 +976,6 @@ html.js-motion .reveal.is-in {
     border-top: 0;
   }
 
-  .colophon {
-    flex-direction: column;
-    align-items: flex-start;
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {

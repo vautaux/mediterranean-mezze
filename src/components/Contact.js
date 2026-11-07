@@ -1,4 +1,5 @@
 import Image from "next/image";
+import salad from "@/app/assets/salad-image.jpg";
 import Reveal from "@/components/Reveal";
 import ContactDialog from "@/components/ContactDialog";
 
@@ -7,17 +8,13 @@ export default function Contact() {
     <section id="contact" className="contact">
       <Reveal className="contact-copy">
         <h2 className="display">Get in touch</h2>
-        <p>
-          We love hearing from the table. Whether you have a question, want to
-          stock a bottle, or just want to tell us what you dressed tonight,
-          we&apos;re here.
-        </p>
         <ContactDialog />
       </Reveal>
       <div className="contact-art">
         <Image
-          src="/photos/persian-salad.jpg"
+          src={salad}
           alt="A bowl of finely chopped Persian salad with mint and herbs, seen from above"
+          placeholder="blur"
           fill
           sizes="(max-width: 960px) 90vw, 45vw"
           className="photo"
