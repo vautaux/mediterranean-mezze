@@ -1,5 +1,5 @@
 import Image from "next/image";
-import salad from "@/app/assets/salad-image.jpg";
+import salad from "@/app/assets/fattoush-spread.jpg";
 import Reveal from "@/components/Reveal";
 import ContactDialog from "@/components/ContactDialog";
 
@@ -13,7 +13,7 @@ export default function Contact() {
       <div className="contact-art">
         <Image
           src={salad}
-          alt="A bowl of finely chopped Persian salad with mint and herbs, seen from above"
+          alt="Two bowls of chopped fattoush salad beside a dish of toasted pita chips, seen from above"
           placeholder="blur"
           fill
           sizes="(max-width: 960px) 90vw, 45vw"

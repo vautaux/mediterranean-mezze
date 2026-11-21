@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Emblem from "@/components/Emblem";
+import Image from "next/image";
 
 const links = [
   { href: "#story", label: "Story" },
@@ -50,7 +50,14 @@ export default function Nav() {
           aria-label="Mediterranean Mezze, back to top"
           onClick={() => setOpen(false)}
         >
-          <Emblem />
+          <Image
+            src="/photos/bia-delish-emblem.png"
+            alt=""
+            width={274}
+            height={240}
+            className="nav-emblem"
+            priority
+          />
         </a>
         <nav className="nav-links" aria-label="Sections">
           {links.slice(0, 3).map((link) => (

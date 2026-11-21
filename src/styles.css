@@ -201,14 +201,9 @@ button {
   color: var(--bone);
 }
 
-.nav-mark .emblem {
-  width: 52px;
+.nav-mark .nav-emblem {
+  width: auto;
   height: 52px;
-  transition: transform 0.6s ease;
-}
-
-.nav-mark:hover .emblem {
-  transform: rotate(22.5deg);
 }
 
 .nav-links {
@@ -571,9 +566,11 @@ button {
 
 .welcome-art {
   position: relative;
-  min-height: 72vh;
+  aspect-ratio: 342 / 512;
+  width: min(100%, calc(80vh * 342 / 512));
+  justify-self: center;
   overflow: hidden;
-  border-radius: 50% 50% 6px 6px / 30% 30% 6px 6px;
+  border-radius: 50% 50% 6px 6px / 33.4% 33.4% 6px 6px;
   box-shadow: 0 30px 60px -30px rgb(38 46 27 / 0.6);
 }
 
@@ -597,6 +594,12 @@ button {
   flex-direction: column;
   align-items: center;
   text-align: center;
+}
+
+.welcome-logo {
+  width: min(100%, 26rem);
+  height: auto;
+  margin-bottom: clamp(2rem, 5vw, 3.5rem);
 }
 
 .welcome-copy p:not(.kicker) {
@@ -685,9 +688,9 @@ button {
 .contact-art {
   position: relative;
   width: 100%;
-  max-width: 34rem;
+  max-width: 28rem;
   justify-self: center;
-  aspect-ratio: 5 / 4;
+  aspect-ratio: 3 / 4;
   overflow: hidden;
   background: var(--bone);
   border-radius: 50% 50% 6px 6px / 30% 30% 6px 6px;
@@ -697,7 +700,7 @@ button {
 /* Photo fills the whole arch. */
 .contact-art .photo {
   object-fit: cover;
-  object-position: 50% 58%;
+  object-position: 50% 50%;
 }
 
 .contact-copy .pill {
@@ -927,7 +930,7 @@ html.js-motion .reveal.is-in {
   }
 
   .welcome-art {
-    min-height: 50vh;
+    width: min(100%, 420px);
   }
 
 
@@ -942,8 +945,7 @@ html.js-motion .reveal.is-in {
     display: none;
   }
 
-  .nav-mark .emblem {
-    width: 44px;
+  .nav-mark .nav-emblem {
     height: 44px;
   }
 
