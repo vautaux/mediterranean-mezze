@@ -464,9 +464,10 @@ button {
 }
 
 .use .media {
-  aspect-ratio: 10 / 9;
+  aspect-ratio: 3 / 2;
   display: grid;
   place-items: center;
+  padding-top: 8%;
 }
 
 .use .media .use-copy {
@@ -500,7 +501,7 @@ button {
 
 .use h3 {
   position: absolute;
-  top: 17%;
+  top: 11%;
   left: 0;
   right: 0;
   z-index: 1;
