@@ -5,13 +5,13 @@ const flavours = [
   {
     n: "No. 01",
     title: "Bright",
-    copy: "Zesty lemon, smooth tahini, and golden honey—bringing sunlit freshness to every bite.",
+    copy: "Zesty lemon, smooth sesame paste, and golden honey—bringing sunlit freshness to every bite.",
     tone: "saffron",
   },
   {
     n: "No. 02",
     title: "Tangy",
-    copy: "Sweet pomegranate molasses, red wine vinegar, and sumac for a bold, mouthwatering kick.",
+    copy: "Pomegranate molasses, red wine vinegar, and sumac for a bold, mouthwatering kick.",
     tone: "sumac",
   },
   {
