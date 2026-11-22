@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <>
       <Nav />
-      <main id="top">
+      <main id="main">
         <Story />
         <Uses />
         <Discover />

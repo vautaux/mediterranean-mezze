@@ -333,13 +333,11 @@ button {
 
 .tone-sumac {
   background:
-    radial-gradient(circle at 30% 25%, rgb(217 164 65 / 0.3), transparent 50%),
     linear-gradient(165deg, var(--pomegranate), var(--sumac) 55%, #3b1013);
 }
 
 .tone-saffron {
   background:
-    radial-gradient(circle at 70% 20%, rgb(255 236 190 / 0.4), transparent 45%),
     linear-gradient(165deg, #e2b257, #a8691f 60%, #5a3110);
 }
 
@@ -351,7 +349,6 @@ button {
 
 .tone-herb {
   background:
-    radial-gradient(circle at 30% 20%, rgb(236 228 212 / 0.25), transparent 45%),
     linear-gradient(165deg, #6fa04a, #3f6b2c 60%, #1c3414);
 }
 
@@ -420,14 +417,34 @@ button {
 /* ---------- On the table ---------- */
 
 .table {
-  padding: clamp(5rem, 11vw, 8rem) var(--gutter);
+  padding: clamp(2.5rem, 5vw, 3.5rem) var(--gutter) clamp(5rem, 11vw, 8rem);
   background: var(--olive);
 }
 
 .table-lead {
   max-width: 72rem;
-  margin: 0 auto clamp(3rem, 6vw, 5rem);
+  margin: 0 auto clamp(2rem, 4vw, 3rem);
   text-align: center;
+}
+
+.table .display {
+  color: #fff;
+  font-weight: 800;
+  font-size: clamp(1.4rem, 2.6vw, 2rem);
+}
+
+.table-photo {
+  max-width: 30rem;
+  margin: 0 auto clamp(1.2rem, 2.5vw, 2rem);
+  overflow: hidden;
+  border-radius: 6px;
+  box-shadow: 0 30px 60px -30px rgb(0 0 0 / 0.6);
+}
+
+.table-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .uses {
@@ -438,10 +455,30 @@ button {
   margin: 0 auto;
 }
 
+.use .media::after {
+  display: none;
+}
+
+.use .use-body {
+  display: contents;
+}
+
 .use .media {
   aspect-ratio: 3 / 4;
   display: grid;
   place-items: center;
+}
+
+.use .media .use-copy {
+  margin: 0;
+  padding: 0 clamp(1.4rem, 3vw, 2.2rem);
+  text-align: center;
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: clamp(1.05rem, 1.5vw, 1.3rem);
+  line-height: 1.55;
+  color: var(--bone);
+  text-shadow: 0 2px 14px rgb(0 0 0 / 0.45);
 }
 
 .use-fa {
@@ -462,8 +499,14 @@ button {
 }
 
 .use h3 {
-  margin-top: 1.4rem;
+  position: absolute;
+  top: 24%;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  margin: 0;
   text-align: center;
+  color: #fff;
   font-family: var(--font-display);
   font-size: 1.35rem;
   letter-spacing: 0.06em;
@@ -566,11 +609,11 @@ button {
 
 .welcome-art {
   position: relative;
-  aspect-ratio: 342 / 512;
-  width: min(100%, calc(80vh * 342 / 512));
+  aspect-ratio: 1169 / 1144;
+  width: min(100%, calc(80vh * 1169 / 1144));
   justify-self: center;
   overflow: hidden;
-  border-radius: 50% 50% 6px 6px / 33.4% 33.4% 6px 6px;
+  border-radius: 50% 50% 6px 6px / 45% 45% 6px 6px;
   box-shadow: 0 30px 60px -30px rgb(38 46 27 / 0.6);
 }
 
@@ -580,13 +623,14 @@ button {
 
 .welcome .display {
   font-family: var(--font-serif);
-  font-size: clamp(2rem, 4.4vw, 3.6rem);
+  font-size: clamp(1.6rem, 3.2vw, 3rem);
+  white-space: nowrap;
   font-weight: 500;
   font-style: italic;
   letter-spacing: 0;
   text-transform: none;
   color: var(--olive);
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 .welcome-copy {
@@ -600,6 +644,14 @@ button {
   width: min(100%, 26rem);
   height: auto;
   margin-bottom: clamp(2rem, 5vw, 3.5rem);
+}
+
+.welcome .welcome-headline {
+  font-family: var(--font-serif);
+  font-size: clamp(1.25rem, 2vw, 1.75rem);
+  font-weight: 500;
+  color: var(--olive);
+  margin-bottom: 0.2rem;
 }
 
 .welcome-copy p:not(.kicker) {
@@ -834,10 +886,9 @@ button {
   text-decoration: none;
 }
 
-.footer-brand .emblem {
-  width: 72px;
-  height: 72px;
-  color: var(--saffron);
+.footer-brand .footer-emblem {
+  width: auto;
+  height: 84px;
   flex: none;
 }
 
@@ -996,4 +1047,173 @@ html.js-motion .reveal.is-in {
     opacity: 1;
     transform: none;
   }
+}
+
+/* The (max-width: 960px) block above was never closed, so everything after it
+   was nested inside that media query. Close it here. */
+}
+
+/* ---------- Inner pages ---------- */
+
+.benefits {
+  display: grid;
+  gap: clamp(3rem, 7vw, 5.5rem);
+  max-width: 72rem;
+  margin: clamp(2.5rem, 5vw, 4rem) auto 0;
+  text-align: left;
+}
+
+.benefit {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: clamp(2rem, 5vw, 4.5rem);
+  align-items: center;
+}
+
+.benefit.is-reversed .benefit-photo {
+  order: 2;
+}
+
+.benefit-photo {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  border-radius: 6px;
+  background: var(--olive-deep);
+  box-shadow: 0 30px 60px -30px rgb(0 0 0 / 0.6);
+}
+
+.benefit-text h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.4rem, 2.4vw, 2rem);
+  color: #fff;
+}
+
+.benefit-sub {
+  margin: 0.4rem 0 1.4rem;
+  font-family: var(--font-serif);
+  font-style: italic;
+  color: var(--saffron);
+}
+
+.benefit-text ul {
+  display: grid;
+  gap: 1rem;
+  padding: 0;
+  list-style: none;
+  line-height: 1.7;
+}
+
+.benefit-text strong {
+  color: #fff;
+  font-weight: 500;
+}
+
+@media (max-width: 760px) {
+  .benefit {
+    grid-template-columns: 1fr;
+  }
+
+  .benefit.is-reversed .benefit-photo {
+    order: 0;
+  }
+}
+
+.story-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: clamp(2rem, 5vw, 4.5rem);
+  align-items: center;
+  max-width: 72rem;
+  margin: clamp(2rem, 4vw, 3rem) auto 0;
+  text-align: left;
+}
+
+.story-text h2 {
+  margin-bottom: 1.2rem;
+  font-family: var(--font-display);
+  font-size: clamp(1.4rem, 2.4vw, 2rem);
+  color: #fff;
+}
+
+.story-text p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.story-text p + p {
+  margin-top: 1rem;
+}
+
+@media (max-width: 760px) {
+  .story-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+.page-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  box-shadow: 0 30px 60px -30px rgb(0 0 0 / 0.6);
+}
+
+.page {
+  min-height: 70vh;
+  padding: clamp(8rem, 14vw, 11rem) var(--gutter) clamp(4rem, 8vw, 6rem);
+  background: var(--olive);
+  color: var(--bone);
+  text-align: center;
+}
+
+.page .display {
+  color: #fff;
+  font-size: clamp(2rem, 4.4vw, 3.4rem);
+}
+
+.page-copy {
+  max-width: 40rem;
+  margin: 2.5rem auto 0;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.page-copy p + p {
+  margin-top: 1rem;
+}
+
+.nutrition {
+  width: 100%;
+  margin-top: 1.5rem;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.nutrition th,
+.nutrition td {
+  padding: 0.8rem 0.6rem;
+  border-bottom: 1px solid var(--rule);
+  font-weight: 400;
+}
+
+.nutrition thead th {
+  font-family: var(--font-serif);
+  font-size: 0.78rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--saffron);
+}
+
+.nutrition td {
+  text-align: center;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
 }

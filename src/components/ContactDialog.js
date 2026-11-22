@@ -5,6 +5,10 @@ import { useEffect, useRef } from "react";
 const PHONE_LABEL = "085 810 7866";
 const PHONE_HREF = "tel:+353858107866";
 const EMAIL = "info@mediterranean-mezze.com";
+const INSTAGRAM_HANDLE = "biadelish";
+const INSTAGRAM_HREF = `https://www.instagram.com/${INSTAGRAM_HANDLE}`;
+const FACEBOOK_HANDLE = "biadelish";
+const FACEBOOK_HREF = `https://www.facebook.com/${FACEBOOK_HANDLE}`;
 
 // A modal with the phone number and inbox, opened from any "Contact us" button.
 export default function ContactDialog({ triggerClassName = "pill pill-solid", triggerLabel = "Contact us" }) {
@@ -60,6 +64,18 @@ export default function ContactDialog({ triggerClassName = "pill pill-solid", tr
             ⦿
           </span>
           {EMAIL}
+        </a>
+        <a className="dialog-row" href={INSTAGRAM_HREF} target="_blank" rel="noopener noreferrer">
+          <span className="dialog-icon" aria-hidden="true">
+            ⦿
+          </span>
+          Instagram @{INSTAGRAM_HANDLE}
+        </a>
+        <a className="dialog-row" href={FACEBOOK_HREF} target="_blank" rel="noopener noreferrer">
+          <span className="dialog-icon" aria-hidden="true">
+            ⦿
+          </span>
+          Facebook /{FACEBOOK_HANDLE}
         </a>
       </dialog>
     </>

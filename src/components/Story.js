@@ -6,7 +6,7 @@ export default function Story() {
     <section id="story" className="welcome">
       <div className="welcome-art">
         <Image
-          src="/photos/bia-delish-dressings-arch.jpg"
+          src="/photos/bia-delish-dressings-studio.jpg"
           alt="Bia Delish salad dressings with sesame seed paste and pomegranate molasses"
           fill
           sizes="(max-width: 960px) 90vw, 45vw"
@@ -24,12 +24,13 @@ export default function Story() {
           priority
         />
         <h2 className="display">
-          Welcome
-          <br />
-          to
-          <br />
-          Bia Delish
+          Welcome to Bia Delish
         </h2>
+        <h3 className="welcome-headline">Taste the Soul of the Mediterranean</h3>
+        <p className="welcome-sub">
+          Handcrafted, all-natural salad dressings made with authentic ingredients. Elevate your
+          everyday greens with Bia Delish by Mediterranean Mezze.
+        </p>
       </Reveal>
     </section>
   );

@@ -2,12 +2,19 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
+
+const pages = [
+  { href: "/", label: "Home" },
+  { href: "/our-story", label: "Our Story" },
+  { href: "/nutritional-benefit", label: "Nutritional Benefit" },
+];
 
 const links = [
-  { href: "#story", label: "Story" },
-  { href: "#table", label: "On the Table" },
-  { href: "#discover", label: "The Bottle" },
-  { href: "#contact", label: "Contact" },
+  ...pages,
+  { href: "/#table", label: "On the Table" },
+  { href: "/#discover", label: "The Bottle" },
+  { href: "/#contact", label: "Contact" },
 ];
 
 export default function Nav() {
@@ -41,12 +48,12 @@ export default function Nav() {
   return (
     <>
       <header className={`nav${solid || open ? " is-solid" : ""}`}>
-        <a className="skip" href="#story">
+        <a className="skip" href="#main">
           Skip to the story
         </a>
-        <a
+        <Link
           className="nav-mark"
-          href="#top"
+          href="/"
           aria-label="Mediterranean Mezze, back to top"
           onClick={() => setOpen(false)}
         >
@@ -58,12 +65,12 @@ export default function Nav() {
             className="nav-emblem"
             priority
           />
-        </a>
-        <nav className="nav-links" aria-label="Sections">
-          {links.slice(0, 3).map((link) => (
-            <a key={link.href} href={link.href}>
-              {link.label}
-            </a>
+        </Link>
+        <nav className="nav-links" aria-label="Pages">
+          {pages.map((page) => (
+            <Link key={page.href} href={page.href}>
+              {page.label}
+            </Link>
           ))}
         </nav>
         <button
@@ -75,16 +82,16 @@ export default function Nav() {
         >
           {open ? "Close" : "Menu"}
         </button>
-        <a className="pill nav-pill" href="#contact" onClick={() => setOpen(false)}>
+        <Link className="pill nav-pill" href="/#contact" onClick={() => setOpen(false)}>
           Get in touch
-        </a>
+        </Link>
       </header>
       <div id="site-menu" className={`menu${open ? " is-open" : ""}`} hidden={!open}>
         <nav aria-label="Primary">
           {links.map((link) => (
-            <a key={link.href} href={link.href} onClick={() => setOpen(false)}>
+            <Link key={link.href} href={link.href} onClick={() => setOpen(false)}>
               <span>{link.label}</span>
-            </a>
+            </Link>
           ))}
         </nav>
       </div>

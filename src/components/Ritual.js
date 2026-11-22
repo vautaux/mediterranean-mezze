@@ -1,8 +1,8 @@
 const steps = [
-  { n: "01", title: "Shake", copy: "The molasses settles. Wake the bottle before you pour." },
-  { n: "02", title: "Dress", copy: "Pour while the leaves are still crisp and cold." },
-  { n: "03", title: "Toss", copy: "Toasted pita shards go in at the last second." },
-  { n: "04", title: "Enjoy", copy: "Fattoush waits for no one. Bring it to the table." },
+  { n: "01", title: "Shake", copy: "Give the bottle a good shake to wake up the real ingredients." },
+  { n: "02", title: "Dress", copy: "Drizzle generously over crisp greens, bowls, or warm flatbreads." },
+  { n: "03", title: "Toss", copy: "Gently coat every leaf so the flavors mingle evenly." },
+  { n: "04", title: "Enjoy", copy: "Set it down, gather around, and savor the taste of the Mediterranean." },
 ];
 
 export default function Ritual() {
@@ -18,6 +18,7 @@ export default function Ritual() {
               {step.n}
             </span>
             <h3>{step.title}</h3>
+            <p>{step.copy}</p>
           </li>
         ))}
       </ol>

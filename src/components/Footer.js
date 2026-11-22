@@ -1,4 +1,4 @@
-import Emblem from "@/components/Emblem";
+import Image from "next/image";
 
 export default function Footer() {
   return (
@@ -7,7 +7,13 @@ export default function Footer() {
       <div className="footer-field">
         <div className="footer-inner">
           <a className="footer-brand" href="#top">
-            <Emblem />
+            <Image
+              src="/photos/bia-delish-emblem.png"
+              alt="Bia Delish, back to top"
+              width={274}
+              height={240}
+              className="footer-emblem"
+            />
           </a>
         </div>
         <div className="colophon">
