@@ -5,15 +5,15 @@ import { unsplash } from "@/components/Media";
 
 export const metadata = {
   title: "Nutritional Benefit — Bia Delish",
-  description: "Why tahini, pomegranate molasses, extra virgin olive oil and sumac go into Bia Delish dressings.",
+  description: "Why sesame paste, pomegranate molasses, extra virgin olive oil and sumac go into Bia Delish dressings.",
 };
 
 const sections = [
   {
-    title: "Tahini",
+    title: "Sesame Paste",
     subtitle: "Pure Roasted Sesame",
     src: "/photos/tahini-jar.jpg",
-    alt: "A glass jar of creamy tahini sauce with a wooden spoon, sesame seeds, chili flakes, garlic and parsley",
+    alt: "A glass jar of creamy sesame paste sauce with a wooden spoon, sesame seeds, chili flakes, garlic and parsley",
     points: [
       ["Heart & Cellular Defense", "Rich in monounsaturated fats and rare sesame lignans (sesamin) that protect cells and support cardiovascular vitality."],
       ["Mineral-Dense Strength", "Naturally abundant in bioavailable calcium, magnesium, and iron for bone density and sustained daily energy."],

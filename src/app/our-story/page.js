@@ -30,11 +30,6 @@ export default function OurStoryPage() {
               ordinary day into something worth sitting down for. Delish is the promise on top:
               bold flavor, comforting textures, and food that simply hits the spot.
             </p>
-            <p>
-              We called it Bia Delish because great food shouldn&apos;t feel complicated or out of
-              reach. Every dish starts with care and good ingredients, finished so it feels
-              familiar, vibrant, and to enjoy
-            </p>
           </div>
         </div>
       </main>
