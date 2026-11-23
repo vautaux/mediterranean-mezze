@@ -24,11 +24,29 @@ export default function OurStoryPage() {
             />
           </div>
           <div className="story-text">
-            <h2>Why Bia Delish?</h2>
             <p>
-              In Irish, bia means food—the kind made to nourish, gather people in, and turn an
-              ordinary day into something worth sitting down for. Delish is the promise on top:
-              bold flavor, comforting textures, and food that simply hits the spot.
+              Bia Delish began with a simple craving: bringing the vibrant, sun-drenched flavours of
+              an authentic Mediterranean table straight to Irish kitchens.
+            </p>
+            <p>
+              In Irish, bia means food—and for us, food is all about connection, generosity, and
+              sharing the best of what you have. Drawing from time-honoured family recipes passed
+              down through generations in the Mediterranean, we set out to bottle the soul of a
+              traditional mezze spread into a single, effortless pour.
+            </p>
+            <p>
+              Every bottle of our signature salad dressing is a celebration of bold, honest
+              ingredients: the deep, sweet-tart richness of pomegranate molasses, velvety sesame
+              paste cold-pressed extra virgin olive oil, bright lemon juice, tangy sumac, fragrant
+              mint, and a pinch of salt. And garlic Nothing artificial, no shortcuts—just pure,
+              punchy flavour.
+            </p>
+            <p>
+              While our culinary roots lie along the Mediterranean coast, our home is right here in
+              Ireland. Each batch is carefully mixed and packed in Ireland, marrying Mediterranean
+              heritage with Irish food craftsmanship. Whether drizzled over crisp garden greens,
+              roasted vegetables, or grilled meats, Bia Delish is made to turn everyday meals into a
+              feast worth sharing.
             </p>
           </div>
         </div>

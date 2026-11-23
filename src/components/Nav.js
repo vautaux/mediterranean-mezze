@@ -8,12 +8,13 @@ const pages = [
   { href: "/", label: "Home" },
   { href: "/our-story", label: "Our Story" },
   { href: "/nutritional-benefit", label: "Nutritional Benefit" },
+  { href: "/our-product", label: "Our Product" },
+  { href: "/salad-recipe", label: "Salad Recipe" },
 ];
 
 const links = [
   ...pages,
   { href: "/#table", label: "On the Table" },
-  { href: "/#discover", label: "The Bottle" },
   { href: "/#contact", label: "Contact" },
 ];
 

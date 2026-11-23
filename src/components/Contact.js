@@ -1,5 +1,4 @@
 import Image from "next/image";
-import salad from "@/app/assets/fattoush-spread.jpg";
 import Reveal from "@/components/Reveal";
 import ContactDialog from "@/components/ContactDialog";
 
@@ -12,9 +11,8 @@ export default function Contact() {
       </Reveal>
       <div className="contact-art">
         <Image
-          src={salad}
-          alt="Two bowls of chopped fattoush salad beside a dish of toasted pita chips, seen from above"
-          placeholder="blur"
+          src="/photos/bia-delish-table-scene.jpg"
+          alt="Bia Delish sesame dressing on a paisley table with candles, brass jugs, mint, za'atar, sumac and pita chips"
           fill
           sizes="(max-width: 960px) 90vw, 45vw"
           className="photo"

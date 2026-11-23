@@ -1220,3 +1220,29 @@ html.js-motion .reveal.is-in {
   clip-path: inset(50%);
   white-space: nowrap;
 }
+
+.benefits.is-product .benefit-photo {
+  aspect-ratio: 0.64;
+  width: min(100%, 26rem);
+  justify-self: center;
+}
+.benefits.is-product .benefit-text p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.recipe h3 {
+  margin: 1.6rem 0 0.6rem;
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 1rem;
+  color: var(--saffron);
+}
+.recipe ul,
+.recipe ol {
+  display: grid;
+  gap: 0.5rem;
+  padding-left: 1.3rem;
+  line-height: 1.6;
+}
