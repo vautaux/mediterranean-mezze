@@ -24,13 +24,13 @@ const lalezar = Lalezar({
 });
 
 export const metadata = {
-  title: "Mediterranean Mezze — Fattoush dressing",
+  title: "Mediterranean Mezze — Bia Delish",
   description:
-    "Small-batch fattoush dressing with lemon, sumac, pomegranate molasses, and mint.",
+    "Handcrafted, all-natural salad dressings made with authentic ingredients. Elevate your everyday greens with Bia Delish by Mediterranean Mezze.",
   openGraph: {
     title: "Mediterranean Mezze",
     description:
-      "Small-batch fattoush dressing with lemon, sumac, pomegranate molasses, and mint.",
+      "Handcrafted, all-natural salad dressings made with authentic ingredients. Elevate your everyday greens with Bia Delish by Mediterranean Mezze.",
     type: "website",
   },
 };
