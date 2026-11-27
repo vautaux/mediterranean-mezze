@@ -14,18 +14,35 @@ export default function Story() {
         />
       </div>
       <Reveal className="welcome-copy">
-        <Image
-          src="/photos/bia-delish-logo.png"
-          alt="Bia Delish Mediterranean Mezze"
-          width={900}
-          height={612}
-          sizes="(max-width: 960px) 80vw, 40vw"
-          className="welcome-logo"
-          priority
-        />
-        <h2 className="display">
-          Welcome to Bia Delish
-        </h2>
+        <div className="welcome-logo" role="img" aria-label="Bia Delish Mediterranean Mezze">
+          <Image
+            src="/photos/bia-delish-logo-monogram.png"
+            alt=""
+            width={900}
+            height={440}
+            sizes="(max-width: 960px) 80vw, 40vw"
+            className="logo-monogram"
+            priority
+          />
+          <Image
+            src="/photos/bia-delish-logo-mezze.png"
+            alt=""
+            width={872}
+            height={48}
+            sizes="(max-width: 960px) 80vw, 40vw"
+            className="logo-mezze"
+            priority
+          />
+          <Image
+            src="/photos/bia-delish-logo-tree.png"
+            alt=""
+            width={652}
+            height={117}
+            sizes="(max-width: 960px) 60vw, 30vw"
+            className="logo-tree"
+            priority
+          />
+        </div>
         <h3 className="welcome-headline">Taste the Soul of the Mediterranean</h3>
         <p className="welcome-sub">
           Handcrafted, all-natural salad dressings made with authentic ingredients. Elevate your

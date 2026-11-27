@@ -17,7 +17,7 @@ export default function Footer() {
           </a>
         </div>
         <div className="colophon">
-          <p>© Mediterranean Mezze 2026</p>
+          <p>© Mediterranean Mezze</p>
         </div>
       </div>
     </footer>

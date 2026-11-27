@@ -525,7 +525,7 @@ button {
 .ritual {
   position: relative;
   padding: clamp(5rem, 11vw, 8rem) var(--gutter);
-  background: var(--olive-deep);
+  background: var(--olive-soft);
   text-align: center;
   isolation: isolate;
 }
@@ -542,7 +542,7 @@ button {
 
 .steps {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   max-width: 72rem;
   margin: clamp(3rem, 6vw, 5rem) auto 0;
   padding: 0;
@@ -642,9 +642,33 @@ button {
 }
 
 .welcome-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: min(100%, 26rem);
-  height: auto;
   margin-bottom: clamp(2rem, 5vw, 3.5rem);
+}
+
+/* Widths are relative to the 900px original logo so the parts keep their proportions. */
+.welcome-logo img {
+  display: block;
+  height: auto;
+}
+
+.logo-monogram {
+  width: 100%;
+}
+
+.logo-mezze {
+  width: 96.9%;
+  margin-top: 1.2rem;
+}
+
+.logo-tree {
+  width: 72.4%;
+  /* The tree PNG has less transparent padding than the monogram, so it needs a bit more margin
+     than .logo-mezze to look equally spaced. */
+  margin-top: 1.35rem;
 }
 
 .welcome .welcome-headline {
@@ -1130,6 +1154,23 @@ html.js-motion .reveal.is-in {
   max-width: 72rem;
   margin: clamp(2rem, 4vw, 3rem) auto 0;
   text-align: left;
+}
+
+.story-layout + .story-layout {
+  margin-top: clamp(4rem, 8vw, 6rem);
+}
+
+/* Text on the left, photo on the right. Stacked layouts keep the photo first. */
+@media (min-width: 761px) {
+  .story-layout.is-reversed .page-photo {
+    order: 1;
+  }
+}
+
+.story-text .recipe-tagline {
+  margin-bottom: 1rem;
+  font-style: italic;
+  color: var(--saffron);
 }
 
 .story-text h2 {
